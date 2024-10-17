@@ -22,7 +22,9 @@ Analyze the output waveforms in the simulation window, and verify that the corre
 
 Capture screenshots of the waveform and save the simulation logs. These will be included in the lab report.
 
-Diagram image
+## Diagram image
+![image](https://github.com/user-attachments/assets/1ec6bbe4-8fe1-4a67-aa18-1ba890cb5d53)
+
 
 ## Verilog Code for Seven-Segment Display
 ```
