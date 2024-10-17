@@ -24,13 +24,29 @@ Capture screenshots of the waveform and save the simulation logs. These will be 
 
 Diagram image
 
-Verilog Code for Seven-Segment Display
-
-module bcd(bcd,seg); input[3:0]bcd; output reg [7:0]seg; always@(*) case(bcd) 0:seg=7'b0000001; 1:seg=7'b1001111; 2:seg=7'b0010010; 3:seg=7'b0000110; 4:seg=7'b1001100; 5:seg=7'b0100100; 6:seg=7'b0100000; 7:seg=7'b0001111; 8:seg=7'b0000000; 9:seg=7'b0000100; default:seg=7'b1111111; endcase
+## Verilog Code for Seven-Segment Display
+~~~
+module bcd(bcd,seg); 
+input[3:0]bcd;
+output reg [7:0]seg;
+always@(*) 
+case(bcd) 0:seg=7'b0000001;
+          1:seg=7'b1001111;
+          2:seg=7'b0010010; 
+          3:seg=7'b0000110; 
+          4:seg=7'b1001100;
+          5:seg=7'b0100100;
+          6:seg=7'b0100000;
+          7:seg=7'b0001111;
+          8:seg=7'b0000000;
+          9:seg=7'b0000100; 
+          default:seg=7'b1111111;
+          endcase
+~~~
 ![7 segment(1)](https://github.com/user-attachments/assets/20e0fb49-9592-441f-b441-beb9d4e64c8e)
 
 
-Testbench for Seven-Segment Display:
+## Testbench for Seven-Segment Display:
 
 module bcd_tb; // Inputs reg [3:0] bcd;
 
@@ -39,7 +55,7 @@ module bcd_tb; // Inputs reg [3:0] bcd;
 // Instantiate the Unit Under Test (UUT) bcd uut ( .bcd(bcd), .seg(seg) );
 
 // Test procedure initial begin // Initialize inputs bcd = 4'b0000;
-
+~~~
 #10 bcd = 4'b0000; // Display 0
 #10 bcd = 4'b0001; // Display 1
 #10 bcd = 4'b0010; // Display 2
@@ -52,10 +68,12 @@ module bcd_tb; // Inputs reg [3:0] bcd;
 #10 bcd = 4'b1001; // Display 9
 #10 $stop;
 end
+endmodule
+~~~
 
 // Monitor outputs
 
-endmodule
+
 ![7 segment](https://github.com/user-attachments/assets/db831b50-9dc4-41e4-84ca-56cfcce661d9)
 
 
