@@ -25,7 +25,7 @@ Capture screenshots of the waveform and save the simulation logs. These will be 
 Diagram image
 
 ## Verilog Code for Seven-Segment Display
-
+```
 module bcd(bcd,seg); 
 input[3:0]bcd;
 output reg [7:0]seg;
@@ -41,13 +41,13 @@ case(bcd) 0:seg=7'b0000001;
           8:seg=7'b0000000;
           9:seg=7'b0000100; 
           default:seg=7'b1111111;
-          endcase
-
+endcase
+```
 ![7 segment(1)](https://github.com/user-attachments/assets/20e0fb49-9592-441f-b441-beb9d4e64c8e)
 
 
 ## Testbench for Seven-Segment Display:
-
+```
 module bcd_tb; 
 // Inputs reg [3:0] bcd;
 
@@ -72,7 +72,7 @@ module bcd_tb;
 #10 $stop;
 end
 endmodule
-
+```
 // Monitor outputs
 
 
