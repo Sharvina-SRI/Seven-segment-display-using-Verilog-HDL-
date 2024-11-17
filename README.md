@@ -1,4 +1,5 @@
-Experiment No:02
+Experiment No: 02
+
 Date: 14.09.2024
 
 # Seven Segment Display
